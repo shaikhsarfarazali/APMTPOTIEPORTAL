@@ -1,0 +1,29 @@
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-label>
+        Chassis No :<strong>{{ data?.chassisNo }}</strong>
+      </ion-label>
+    </ion-item>
+    <ion-card-header>
+      <!-- <ion-card-subtitle>Power Of Attorney</ion-card-subtitle> -->
+      <ion-card-title>Upload POA</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <input id="input" type="file" [(ngModel)]="poaFile" accept=".pdf" />
+          <!-- <ion-fab>
+            <ion-fab-button>
+              <label for="input" style="font-size: 20pt; padding: 30px"> + </label>
+              <input id="input" type="file" class="hideInput" />
+            </ion-fab-button>
+          </ion-fab> -->
+        </ion-col>
+        <ion-col class="ion-text-end ion-margin-top">
+          <ion-button (click)="onUpload()">Submit</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

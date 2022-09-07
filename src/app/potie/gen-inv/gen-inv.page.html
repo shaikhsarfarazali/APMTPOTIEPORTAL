@@ -1,0 +1,117 @@
+<ion-content class="ion-justify-content-center ion-margin">
+  <ion-card>
+    <ion-item class="ion-text-center">
+      <ion-title>Invoice Generation</ion-title>
+      <!-- <ion-button fill="outline" slot="end">View</ion-button> -->
+    </ion-item>
+
+    <ion-card-content>
+      <ion-radio-group value="chNo">
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>Chassis No</ion-label>
+              <ion-radio color="dark" slot="start" value="chNo"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label>Container Pin No</ion-label>
+              <ion-radio color="dark" slot="start" value="conNo"></ion-radio>
+            </ion-item>
+          </ion-col>
+
+          <ion-col>
+            <ion-item>
+              <ion-searchbar
+                placeholder="Search"
+                showCancelButton="never"
+              ></ion-searchbar>
+              <ion-button color="dark" size="default" (click)="fetchInv()"
+                >Search</ion-button
+              >
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-padding">
+    <ion-row>
+      <ion-col size-lg="3" size-md="4" size-sm="6" size="3">
+        <ion-item class="frm-field">
+          <ion-label>Line Operator ID</ion-label>
+          <ion-select
+            placeholder="Select Operator ID"
+            okText="Ok"
+            cancelText="Cancel"
+          >
+            <ion-select-option value="MSC">MSC</ion-select-option>
+            <ion-select-option value="CSM">CSM</ion-select-option>
+            <ion-select-option value="DTS">DTS</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size-lg="3" size-md="4" size-sm="6" size="3">
+        <ion-item class="frm-field">
+          <ion-label>Invoice Type</ion-label>
+          <ion-select
+            placeholder="Select Invoice Type"
+            okText="Ok"
+            cancelText="Cancel"
+          >
+            <ion-select-option value="storage">Storage</ion-select-option>
+            <ion-select-option value="storage1">Storage 1</ion-select-option>
+            <ion-select-option value="storage2">Storage 2</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size-lg="3" size-md="4" size-sm="6" size="3">
+        <ion-item class="frm-field">
+          <ion-label>Container No</ion-label>
+          <ion-select
+            placeholder="Select Container No"
+            okText="Ok"
+            cancelText="Cancel"
+          >
+            <ion-select-option value="test">TEST1234</ion-select-option>
+            <ion-select-option value="test1">TEST2345</ion-select-option>
+            <ion-select-option value="test2">TEST3456</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size-lg="3" size-md="4" size-sm="6" size="3">
+        <ion-item class="frm-field">
+          <ion-label>Currency</ion-label>
+          <ion-select
+            placeholder="Select Currency"
+            okText="Ok"
+            cancelText="Cancel"
+          >
+            <ion-select-option value="usd">USD</ion-select-option>
+            <ion-select-option value="inr">INR</ion-select-option>
+            <ion-select-option value="qr">QR</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="3" size-md="4" size-sm="6" size="3">
+        <ion-item class="frm-field">
+          <ion-label>Fraight Kind</ion-label>
+          <ion-select
+            placeholder="Select Fraight"
+            okText="Ok"
+            cancelText="Cancel"
+          >
+            <ion-select-option value="fcl">FCL</ion-select-option>
+            <ion-select-option value="tcl">TCL</ion-select-option>
+            <ion-select-option value="kcl">KCL</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

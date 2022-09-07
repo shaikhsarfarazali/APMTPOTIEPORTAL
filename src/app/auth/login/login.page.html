@@ -1,0 +1,83 @@
+<!-- <ion-header>
+  <app-header></app-header>
+</ion-header> -->
+
+<ion-content class="background">
+  <ion-card>
+    <div class="main-form">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+        <ion-card-header class="ion-text-center">
+          <ion-card-title>Login</ion-card-title>
+        </ion-card-header>
+        <div class="ion-margin-bottom">
+          <ion-item class="ion-margin-top">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input formControlName="email" type="email"></ion-input>
+          </ion-item>
+          <ion-text
+            class="error ion-padding"
+            color="danger"
+            *ngIf="isSubmitted && errorControl.email.errors?.required"
+          >
+            <small> Email is required. </small>
+          </ion-text>
+          <ion-text
+            class="error ion-padding"
+            color="danger"
+            *ngIf="isSubmitted && errorControl.email.errors?.pattern"
+          >
+            <small> Please provide valid email id. </small>
+          </ion-text>
+          <ion-item class="ion-margin-top">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input
+              maxlength="10"
+              formControlName="password"
+              type="text"
+            ></ion-input>
+          </ion-item>
+          <ion-text
+            class="error ion-padding"
+            color="danger"
+            *ngIf="isSubmitted && errorControl.password.errors?.required"
+          >
+            <small> Password is required. </small>
+          </ion-text>
+        </div>
+
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" color="primary" expand="block"
+              >Login</ion-button
+            >
+          </ion-col>
+        </ion-row>
+
+        <div class="blk-btm ion-margin-top">
+          <br />
+          <ion-text class="ion-padding">
+            If you don't have an account,
+            <strong>
+              Please<a routerLink="/register"> register</a> first!
+            </strong>
+          </ion-text>
+          <br />
+          <br />
+          <ion-list class="ion-padding">
+            <ion-label>Register for:</ion-label>
+            <ion-item>
+              <ion-select interface="popover" placeholder="Select Terminal">
+                <ion-select-option value="all_terminal"
+                  >All Terminal</ion-select-option
+                >
+                <ion-select-option value="port_of_xyz"
+                  >Port of Xyz</ion-select-option
+                >
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </div>
+      </form>
+    </div>
+  </ion-card>
+</ion-content>

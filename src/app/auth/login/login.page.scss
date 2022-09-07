@@ -1,0 +1,18 @@
+ion-card-title {
+  padding: 1em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-weight: 600;
+}
+
+ion-content.background {
+  --background: url(../../../assets/img/ship-612x612.jpg) 0 0/100% 100%
+    no-repeat;
+}
+
+ion-card {
+  background: transparent;
+}
+
+.blk-btm {
+  border-top: 1px solid;
+}

@@ -1,0 +1,45 @@
+ion-toolbar {
+  height: 4rem;
+}
+ion-grid {
+  height: 30px;
+  ion-row {
+    ion-icon {
+      font-size: xx-large;
+      margin: 2px;
+    }
+    ion-item {
+      bottom: 40px;
+      div {
+        margin: auto;
+      }
+      ion-img {
+        height: 6rem;
+      }
+    }
+    .link {
+      color: #666;
+    }
+    .link:link {
+      text-decoration: none;
+    }
+    .link:hover {
+      color: rgb(16, 103, 243);
+    }
+  }
+}
+.menus {
+  display: none;
+}
+
+$mobile: "screen and (max-width : 700px)";
+$tablet: "only screen and (min-width : 768px)";
+$desktop: "only screen and (min-width : 1025px)";
+@media #{$mobile} {
+  .visibility {
+    display: none;
+  }
+  .menus {
+    display: block;
+  }
+}

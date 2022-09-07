@@ -1,3 +1,4 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <app-header *ngIf="showHead"></app-header>
+  <ion-router-outlet [ngClass]="showHead ? 'main-blk' : ''"></ion-router-outlet>
 </ion-app>

@@ -1,0 +1,133 @@
+<ion-header contentId="menu-content">
+  <ion-toolbar class="visibility">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-item>
+            <div>
+              <ion-img src="../../../assets/img/cargo.jpg"> </ion-img>
+            </div>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <a
+            class="link"
+            href="javascript:void(0)"
+            [matMenuTriggerFor]="userMenu"
+            >User</a
+          >
+          <mat-menu #userMenu="matMenu" yPosition="above">
+            <button mat-menu-item (click)="navigate('/register')">
+              User Registration
+            </button>
+            <button mat-menu-item (click)="navigate('/home')">
+              User Approval
+            </button>
+          </mat-menu>
+        </ion-col>
+
+        <ion-col>
+          <a
+            class="link"
+            href="javascript:void(0)"
+            [matMenuTriggerFor]="aboveMenu"
+            >Container</a
+          >
+          <mat-menu #aboveMenu="matMenu" yPosition="above">
+            <button mat-menu-item (click)="navigate('/about')">
+              Full Container
+            </button>
+            <button mat-menu-item (click)="navigate('/about')">
+              Empty Container
+            </button>
+          </mat-menu>
+        </ion-col>
+
+        <ion-col>
+          <a
+            class="link"
+            href="javascript:void(0)"
+            [matMenuTriggerFor]="carMenu"
+            >Car</a
+          >
+          <mat-menu #carMenu="matMenu" yPosition="above">
+            <button mat-menu-item (click)="navigate('/contact-us')">
+              Chassis No Seas
+            </button>
+          </mat-menu>
+        </ion-col>
+
+        <ion-col>
+          <a
+            class="link"
+            href="javascript:void(0)"
+            [matMenuTriggerFor]="uploadMenu"
+            >Upload</a
+          >
+          <mat-menu #uploadMenu="matMenu" yPosition="above">
+            <button mat-menu-item (click)="navigate('/register')">
+              POA Upload
+            </button>
+            <button mat-menu-item (click)="navigate('/register')">
+              Custom Upload
+            </button>
+          </mat-menu>
+        </ion-col>
+
+        <ion-col>
+          <a
+            class="link"
+            href="javascript:void(0)"
+            [matMenuTriggerFor]="billMenu"
+            >Bill & Payment</a
+          >
+          <mat-menu #billMenu="matMenu" yPosition="above">
+            <button mat-menu-item (click)="navigate('/register')">
+              Proforma Invoice
+            </button>
+            <button mat-menu-item (click)="navigate('/register')">
+              Final Invoice
+            </button>
+            <button mat-menu-item (click)="navigate('/register')">
+              Receipt & Payment
+            </button>
+          </mat-menu>
+        </ion-col>
+
+        <ion-col>
+          <a class="link" href="javascript:void(0)">Trace & Track</a>
+        </ion-col>
+
+        <ion-col size="1"></ion-col>
+        <!-- <ion-col size="2" class="ion-no-padding ion-margin-end">
+          <ion-searchbar
+            style="padding: '0px'; width: '16rem'; text-align: left"
+            *ngIf="isSearchBar"
+            showCancelButton="true"
+            (ionCancel)="isSearchBar = false"
+            animated
+          ></ion-searchbar>
+        </ion-col> -->
+        <ion-col size="1" class="ion-no-padding">
+          <div class="ion-text-center">
+            <!-- <ion-icon
+              class="btn link"
+              name="search-sharp"
+              (click)="isSearchBar = true"
+              *ngIf="!isSearchBar"
+            ></ion-icon> -->
+            <ion-icon
+              class="btn link"
+              name="person"
+              (click)="navigate('/login')"
+            ></ion-icon>
+          </div>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+  <ion-toolbar class="menus" color="primary">
+    <ion-menu-button side="start"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>

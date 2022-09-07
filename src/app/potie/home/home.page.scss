@@ -1,0 +1,35 @@
+ion-list {
+  display: flex;
+  flex-wrap: wrap;
+  background: transparent;
+  .crd-blk {
+    flex: 0 0 22.333333%;
+  }
+}
+
+ion-badge {
+  border-radius: 20%;
+}
+
+.sts {
+  margin-top: 8px;
+  padding: 10px;
+}
+
+.sts-p {
+  background-color: #ffc409;
+}
+
+.sts-a {
+  background-color: #2dd36f;
+}
+
+.crd-blk {
+  gap: 10px;
+  width: 25%;
+  height: 270px;
+  display: flex;
+  border-radius: 5%;
+  flex-wrap: wrap-reverse;
+  border: 1px solid #3880ff;
+}
